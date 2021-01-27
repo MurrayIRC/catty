@@ -14,10 +14,10 @@ public class PlayerMovement : MonoBehaviour {
         if (isMouseDown && !wasMouseDown) {
             // Initial press. Store the starting mouse position.
             dragStartPos = Input.mousePosition;
-        } else if () {
-
-        } else {
-
+        } else if (isMouseDown && wasMouseDown) {
+            // Drag state. Track the mouse's movement here.
+        } else if (!isMouseDown && wasMouseDown) {
+            // We've let go of the mouse. Calculate the shot here.
         }
 
         wasMouseDown = isMouseDown;
